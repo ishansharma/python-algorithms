@@ -1,6 +1,6 @@
-# Algorithms
+# Algorithms & Data Structures
 
-A collection of common algorithms implemented in Python. Doing this for practice. 
+A collection of common algorithms and data structures implemented in Python. 
 
 List of algorithms completed till now: 
 1. Binary search
