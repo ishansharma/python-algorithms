@@ -1,5 +1,6 @@
 # Python Data Structures and Algorithms
 # http://proquest.safaribooksonline.com.libproxy.utdallas.edu/book/programming/python/9781786467355/binary-trees/24fa378d_24f1_4e8f_bff2_cc1cdad5e10a_xhtml?uicode=utdallas
+from collections import deque
 
 
 class Node:
@@ -210,3 +211,22 @@ class BST:
         self.postorder(current.left_child)
         self.postorder(current.right_child)
         print(current.data)
+
+    def breadth_first_traversal(self):
+        """
+        Do a breadth first traversal. We push nodes to explore to a queue and go level by level
+        :return: List
+        """
+        list_of_nodes = []
+        traversal_queue = deque([self.root_node])
+        while len(traversal_queue) > 0:
+            node = traversal_queue.popleft()
+            list_of_nodes.append(node.data)
+
+            if node.left_child:
+                traversal_queue.append(node.left_child)
+
+            if node.right_child:
+                traversal_queue.append(node.right_child)
+
+        return list_of_nodes

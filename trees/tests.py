@@ -42,5 +42,8 @@ print(tree.preorder(tree.root_node))
 print("going to print the tree(post-order):")
 print(tree.preorder(tree.root_node))
 
+print("going to print the tree(breadth first traversal):")
+print(tree.breadth_first_traversal())
+
 res = tree.get_node_with_parent(1)
 
